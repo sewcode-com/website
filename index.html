@@ -80,12 +80,28 @@
 
 		<div class="container fh5co-hero-inner">
 			<h1 class="animated fadeIn wow" data-wow-delay="0.4s">Your online tailor</h1>
-			<h4 style="padding-top: 10px; padding-bottom: 15px;" class="animated fadeIn wow" data-wow-delay="0.67s">Say goodbye to the അൽകുൽത്ത് of getting your dress tailored</h4><br><br>
+			<h4 style="padding-top: 10px; padding-bottom: 15px;" class="animated fadeIn wow" data-wow-delay="0.67s">Say goodbye to the <span style="color: #e7f4ec;">അൽകുൽത്ത്</span> of getting your dress tailored</h4><br><br>
 			<h4 style="padding-top: 10px; padding-bottom: 15px; color: white;" class="animated fadeIn wow" data-wow-delay="0.67s">Place your order</h4>
-			<button class="btn btn-md download-btn-first wow fadeInLeft animated" data-wow-delay="0.85s" onclick="$('#fh5co-download').goTo();return false;">Call us</button>
-			<button class="btn btn-md features-btn-first animated fadeInLeft wow" data-wow-delay="0.95s" onclick="$('#fh5co-features').goTo();return false;">Whatsapp</button>
+			<button class="btn btn-md download-btn-first wow fadeInLeft animated" data-wow-delay="0.85s" onclick="makeCall('+123456789')">Call us</button>
+			<button class="btn btn-md features-btn-first animated fadeInLeft wow" data-wow-delay="0.95s" onclick="openWhatsApp('+123456789', 'Hello!')">Whatsapp</button>
 			<!--<img style="width: 70%; height: 290%;" class="img-float-right animated fadeInRight wow" data-wow-delay="1s" src="" alt="">-->
 		</div>
+		<script>
+			function makeCall(phoneNumber) {
+				window.location.href = 'tel:' + phoneNumber;
+			}
+
+			function openWhatsApp(phoneNumber, message) {
+            // Encode message for URL
+            message = encodeURIComponent(message);
+            // Construct WhatsApp URL
+            var whatsappURL = 'https://wa.me/' + phoneNumber + '?text=' + message;
+            // Open WhatsApp in a new tab/window
+            window.open(whatsappURL);
+        }
+
+		</script>
+	
 
 
 	</div> <!-- first section wrapper -->
@@ -97,24 +113,24 @@
 
 	<div class="fh5co-advantages-outer">
 		<div class="container">
-			<h1 class="fh5co-slider-outer wow fadeIn" data-wow-delay="0.4s">Our process</h1>
+			<h1 class="fh5co-slider-outer wow fadeIn" data-wow-delay="0.4s"><span style="color: #648cff;">Our process</span></h1>
 
 			<div class="row fh5co-advantages-grid-columns wow animated fadeIn" data-wow-delay="0.36s">
 
 				<div class="col-sm-4">
-					<img class="grid-image" src="img/flash2.png" alt="Icon-1">
+					<img class="grid-image" src="img/online-shopping (1) (1).png" alt="Icon-1">
 					<h1 class="grid-title">Place your order</h1>
 					<p class="grid-desc"> Place an online stitching order through call/whatsapp and get connected with our Designer. No more hassle to visit a tailor shop.</p>
 				</div>
 
 				<div class="col-sm-4">
-					<img class="grid-image" src="img/stars.png" alt="Icon-2">
+					<img class="grid-image" src="img/pickup.png" alt="Icon-2">
 					<h1 class="grid-title">Pickup & Measurement</h1>
 					<p class="grid-desc">Our partner will come to your home for fabric pickup and measurements or use a sample garment for sizing.</p>
 				</div>
 
 				<div class="col-sm-4">
-					<img class="grid-image" src="img/accessible.png" alt="Icon-3">
+					<img class="grid-image" src="img/stars.png" alt="Icon-3">
 					<h1 class="grid-title">Stitching</h1>
 					<p class="grid-desc">After design confirmation, our expert tailors begin the precise cutting and stitching of your fabric.
 
@@ -122,7 +138,7 @@
 				</div>
 
 				<div class="col-sm-4">
-					<img class="grid-image" src="img/accessible.png" alt="Icon-4">
+					<img class="grid-image" src="img/delivery.png" alt="Icon-4">
 					<h1 class="grid-title">Delivery</h1>
 					<p class="grid-desc">After quality checked, packed, and at your doorstep per your chosen timeline.</p>
 				</div>
