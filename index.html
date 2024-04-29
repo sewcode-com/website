@@ -49,6 +49,23 @@
 </head>
 <body>
 
+	<script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script>
+  window.botpressWebChat.init({
+      "composerPlaceholder": "Chat with bot",
+      "botConversationDescription": "You can place your order here",
+      "botId": "11328be2-7e1b-493f-ade2-2633f588acde",
+      "hostUrl": "https://cdn.botpress.cloud/webchat/v1",
+      "messagingUrl": "https://messaging.botpress.cloud",
+      "clientId": "11328be2-7e1b-493f-ade2-2633f588acde",
+      "webhookId": "6df67b41-d5e4-4ae7-979f-e0156e9f6f26",
+      "lazySocket": true,
+      "themeName": "prism",
+      "frontendVersion": "v1",
+      "theme": "prism",
+      "themeColor": "#2563eb"
+  });
+</script>
 
 <div id="page-wrap">
 
@@ -136,7 +153,7 @@
 				</div>
 
 				<div class="col-sm-4">
-					<img class="grid-image" src="img/pickup.png" alt="Icon-2">
+					<img class="grid-image" src="img/pickup.png">
 					<h1 class="grid-title">Pickup & Measurement</h1>
 					<p style="text-align: justify;" class="grid-desc">Our partner will come to your home for fabric pickup and measurements or use a sample garment for sizing.</p>
 				</div>
